@@ -1,6 +1,6 @@
 public class clase4 {
     public static void main(String[] args) {
-        Usuario usuario1 = new Usuario();
+        Usuario usuario1 = new Usuario(); //Instanciamos un objeto de la clase usuario que el objeto es"usuario1"
         Usuario usuario2 = new Usuario();
 
         usuario1.nombre = "Manuel";
