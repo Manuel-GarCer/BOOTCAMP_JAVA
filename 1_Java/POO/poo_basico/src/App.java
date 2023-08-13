@@ -2,6 +2,7 @@ import paquete1.Alumno;
 import paquete1.Calculadora;
 import paquete1.Usuario1;
 import paquete1.Ususario;
+import herenciaMultiple.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -11,7 +12,7 @@ public class App {
         // user1.holaNveces(10);
         // user1.nombre = "Andres";
 
-        // int minNumber = Math.min(10, 14);
+        // int minNumber = Math.min(10, 14);|
         // System.out.println("El numero minimo es: " + minNumber);
 
         // Ususario.count++;
@@ -37,9 +38,17 @@ public class App {
 
     //    user1.showInfo();
 
-        Alumno alumno1 = new Alumno("Christian", (byte) 36, "0384", "gmanuel", (byte) 7, (short) 700, (byte) 13 );
-        
-        alumno1.showInfo();
+        //Alumno alumno1 = new Alumno("Christian", (byte) 36, "0384", "gmanuel", (byte) 7, (short) 700, (byte) 13 );
+
+        //alumno1.showInfo();
+        //Cuadrado cuadrado1 = new Cuadrado
+
+        Avion avion1 = new Avion();
+        avion1.encender();
+        avion1.detener();
+        avion1.volar();
+
+
 
     }
 }
