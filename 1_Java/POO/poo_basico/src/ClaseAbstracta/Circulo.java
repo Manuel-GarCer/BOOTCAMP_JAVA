@@ -18,4 +18,9 @@ public class Circulo extends Figura{
         float areaCirculo =(float)3.14*radio*radio;
         return areaCirculo;
     }
+
+    @Override
+    public void printColor(){
+        System.out.println("El color del circulo es: "+color);
+    }
 }

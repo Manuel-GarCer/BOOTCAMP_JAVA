@@ -1,8 +1,10 @@
-import paquete1.Alumno;
+/*import paquete1.Alumno;
 import paquete1.Calculadora;
 import paquete1.Usuario1;
-import paquete1.Ususario;
-import herenciaMultiple.*;
+import paquete1.Ususario;*/
+//import herenciaMultiple.*;
+//import POO.poo_basico.src.Usuario.Usuario3;
+import usuariop.Persona;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -43,10 +45,18 @@ public class App {
         //alumno1.showInfo();
         //Cuadrado cuadrado1 = new Cuadrado
 
-        Avion avion1 = new Avion();
+      /*  Avion avion1 = new Avion();
         avion1.encender();
         avion1.detener();
-        avion1.volar();
+        avion1.volar();*/
+
+        //Usuario3 usuario1 = new Usuario3("Zonia", (byte) 35, "892", "gmanuel");
+
+        
+
+        alumno2.showInfo();
+
+
 
 
 
