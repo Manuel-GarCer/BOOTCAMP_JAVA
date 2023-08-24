@@ -1,0 +1,463 @@
+use ("sample_training");
+
+db.createCollection("Curso")
+
+use("sample_training");
+db.Curso.insertOne(
+    {
+        nombre: "Ciencia",
+        estudiante: 15
+    }
+);
+
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.insertOne(
+    {
+        nombre: "Arte",
+        estudiante: 15,
+        profesor: "Juan"
+    }
+);
+
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.insertMany(
+    [
+        [{
+  "nombre": 3,
+  "estudiantes": "Hacquel",
+  "profesor": "Nibh.txt"
+}, {
+  "nombre": 1,
+  "estudiantes": "O' Connell",
+  "profesor": "VenenatisLacinia.png"
+}, {
+  "nombre": 8,
+  "estudiantes": "Patullo",
+  "profesor": "LectusAliquam.mp3"
+}, {
+  "nombre": 4,
+  "estudiantes": "O'Sirin",
+  "profesor": "NullaSuscipitLigula.png"
+}, {
+  "nombre": 6,
+  "estudiantes": "Dessent",
+  "profesor": "Rhoncus.avi"
+}, {
+  "nombre": 4,
+  "estudiantes": "McGeachey",
+  "profesor": "Magna.ppt"
+}, {
+  "nombre": 8,
+  "estudiantes": "Tongs",
+  "profesor": "TellusNulla.xls"
+}, {
+  "nombre": 1,
+  "estudiantes": "Fossick",
+  "profesor": "MetusAenean.ppt"
+}, {
+  "nombre": 2,
+  "estudiantes": "Jeal",
+  "profesor": "SedInterdum.mp3"
+}, {
+  "nombre": 1,
+  "estudiantes": "Osipenko",
+  "profesor": "A.mp3"
+}, {
+  "nombre": 1,
+  "estudiantes": "McGreay",
+  "profesor": "Primis.avi"
+}, {
+  "nombre": 1,
+  "estudiantes": "McLanaghan",
+  "profesor": "MalesuadaInImperdiet.avi"
+}, {
+  "nombre": 3,
+  "estudiantes": "Klees",
+  "profesor": "TempusVel.png"
+}, {
+  "nombre": 9,
+  "estudiantes": "Freiberg",
+  "profesor": "ConsectetuerAdipiscingElit.avi"
+}, {
+  "nombre": 3,
+  "estudiantes": "Murrey",
+  "profesor": "Tempor.xls"
+}, {
+  "nombre": 9,
+  "estudiantes": "Tatton",
+  "profesor": "FelisSed.jpeg"
+}, {
+  "nombre": 4,
+  "estudiantes": "Spieght",
+  "profesor": "MattisOdioDonec.pdf"
+}, {
+  "nombre": 6,
+  "estudiantes": "Daffey",
+  "profesor": "Sit.avi"
+}, {
+  "nombre": 8,
+  "estudiantes": "Scurrah",
+  "profesor": "DisParturient.mp3"
+}, {
+  "nombre": 7,
+  "estudiantes": "Cuddehay",
+  "profesor": "AnteVelIpsum.jpeg"
+}, {
+  "nombre": 3,
+  "estudiantes": "Repper",
+  "profesor": "Ultrices.jpeg"
+}, {
+  "nombre": 8,
+  "estudiantes": "McNutt",
+  "profesor": "LuctusNecMolestie.gif"
+}, {
+  "nombre": 5,
+  "estudiantes": "Cohani",
+  "profesor": "Volutpat.tiff"
+}, {
+  "nombre": 6,
+  "estudiantes": "Writer",
+  "profesor": "Donec.avi"
+}, {
+  "nombre": 4,
+  "estudiantes": "Maddrah",
+  "profesor": "Nam.pdf"
+}, {
+  "nombre": 5,
+  "estudiantes": "Rowdell",
+  "profesor": "TortorIdNulla.txt"
+}, {
+  "nombre": 1,
+  "estudiantes": "Lacoste",
+  "profesor": "SitAmetErat.mp3"
+}, {
+  "nombre": 10,
+  "estudiantes": "Paterson",
+  "profesor": "DolorSit.tiff"
+}, {
+  "nombre": 6,
+  "estudiantes": "Beneix",
+  "profesor": "NuncProinAt.avi"
+}, {
+  "nombre": 9,
+  "estudiantes": "Swires",
+  "profesor": "Tempus.doc"
+}, {
+  "nombre": 9,
+  "estudiantes": "Sparrowhawk",
+  "profesor": "InTempusSit.avi"
+}, {
+  "nombre": 5,
+  "estudiantes": "Dominici",
+  "profesor": "Id.mp3"
+}, {
+  "nombre": 3,
+  "estudiantes": "Beckwith",
+  "profesor": "CommodoVulputateJusto.mpeg"
+}, {
+  "nombre": 1,
+  "estudiantes": "Champ",
+  "profesor": "LectusInEst.jpeg"
+}, {
+  "nombre": 1,
+  "estudiantes": "Elce",
+  "profesor": "IntegerAc.tiff"
+}, {
+  "nombre": 3,
+  "estudiantes": "Izod",
+  "profesor": "SedSagittisNam.doc"
+}, {
+  "nombre": 8,
+  "estudiantes": "Goodridge",
+  "profesor": "PrimisInFaucibus.xls"
+}, {
+  "nombre": 7,
+  "estudiantes": "Sanbroke",
+  "profesor": "NislNunc.ppt"
+}, {
+  "nombre": 10,
+  "estudiantes": "Harback",
+  "profesor": "In.xls"
+}, {
+  "nombre": 1,
+  "estudiantes": "Koch",
+  "profesor": "Turpis.avi"
+}, {
+  "nombre": 6,
+  "estudiantes": "Duell",
+  "profesor": "SitAmet.ppt"
+}, {
+  "nombre": 3,
+  "estudiantes": "Turl",
+  "profesor": "Quis.mp3"
+}, {
+  "nombre": 4,
+  "estudiantes": "Imlacke",
+  "profesor": "SollicitudinVitaeConsectetuer.xls"
+}, {
+  "nombre": 2,
+  "estudiantes": "Remer",
+  "profesor": "VelitNec.ppt"
+}, {
+  "nombre": 6,
+  "estudiantes": "MacFarlan",
+  "profesor": "MiNulla.ppt"
+}, {
+  "nombre": 10,
+  "estudiantes": "Sutherden",
+  "profesor": "Ultrices.tiff"
+}, {
+  "nombre": 5,
+  "estudiantes": "Dell Casa",
+  "profesor": "UtMauris.tiff"
+}, {
+  "nombre": 10,
+  "estudiantes": "Greenstead",
+  "profesor": "PenatibusEtMagnis.txt"
+}, {
+  "nombre": 6,
+  "estudiantes": "Inchboard",
+  "profesor": "DonecQuisOrci.pdf"
+}, {
+  "nombre": 3,
+  "estudiantes": "Dudley",
+  "profesor": "InEleifendQuam.tiff"
+}, {
+  "nombre": 9,
+  "estudiantes": "Henfre",
+  "profesor": "MalesuadaIn.xls"
+}, {
+  "nombre": 1,
+  "estudiantes": "Stronge",
+  "profesor": "NecDui.mp3"
+}, {
+  "nombre": 4,
+  "estudiantes": "Bentson",
+  "profesor": "Posuere.avi"
+}, {
+  "nombre": 1,
+  "estudiantes": "Teenan",
+  "profesor": "VivamusMetusArcu.mp3"
+}, {
+  "nombre": 6,
+  "estudiantes": "Arrell",
+  "profesor": "Quam.avi"
+}, {
+  "nombre": 9,
+  "estudiantes": "Heinrich",
+  "profesor": "Nam.mpeg"
+}, {
+  "nombre": 6,
+  "estudiantes": "Undy",
+  "profesor": "Venenatis.xls"
+}, {
+  "nombre": 5,
+  "estudiantes": "Beasleigh",
+  "profesor": "Cubilia.avi"
+}, {
+  "nombre": 6,
+  "estudiantes": "Lernihan",
+  "profesor": "EtiamJustoEtiam.xls"
+}, {
+  "nombre": 3,
+  "estudiantes": "Grzegorecki",
+  "profesor": "AOdioIn.mp3"
+}, {
+  "nombre": 5,
+  "estudiantes": "Mather",
+  "profesor": "Aenean.tiff"
+}, {
+  "nombre": 2,
+  "estudiantes": "Hennemann",
+  "profesor": "Diam.tiff"
+}, {
+  "nombre": 1,
+  "estudiantes": "Rougier",
+  "profesor": "Quis.gif"
+}, {
+  "nombre": 8,
+  "estudiantes": "Turpey",
+  "profesor": "CongueEtiam.ppt"
+}, {
+  "nombre": 4,
+  "estudiantes": "Syme",
+  "profesor": "HacHabitassePlatea.pdf"
+}, {
+  "nombre": 4,
+  "estudiantes": "Goseling",
+  "profesor": "Quam.xls"
+}, {
+  "nombre": 9,
+  "estudiantes": "Showering",
+  "profesor": "Justo.xls"
+}, {
+  "nombre": 6,
+  "estudiantes": "Vasser",
+  "profesor": "Risus.jpeg"
+}, {
+  "nombre": 2,
+  "estudiantes": "Hammerberger",
+  "profesor": "Ultrices.xls"
+}, {
+  "nombre": 2,
+  "estudiantes": "Ludlamme",
+  "profesor": "OdioOdio.avi"
+}, {
+  "nombre": 10,
+  "estudiantes": "de Zamora",
+  "profesor": "IntegerPedeJusto.mp3"
+}, {
+  "nombre": 5,
+  "estudiantes": "Ashbolt",
+  "profesor": "UltricesVelAugue.avi"
+}, {
+  "nombre": 7,
+  "estudiantes": "Francescone",
+  "profesor": "Lorem.avi"
+}, {
+  "nombre": 5,
+  "estudiantes": "Yakuntsov",
+  "profesor": "AtVelit.mp3"
+}, {
+  "nombre": 1,
+  "estudiantes": "Luto",
+  "profesor": "FaucibusOrci.tiff"
+}, {
+  "nombre": 8,
+  "estudiantes": "McKyrrelly",
+  "profesor": "In.mp3"
+}, {
+  "nombre": 5,
+  "estudiantes": "Brooke",
+  "profesor": "EleifendQuam.png"
+}, {
+  "nombre": 3,
+  "estudiantes": "Rohlfing",
+  "profesor": "DonecPosuereMetus.tiff"
+}, {
+  "nombre": 8,
+  "estudiantes": "Matschoss",
+  "profesor": "RutrumRutrum.txt"
+}, {
+  "nombre": 3,
+  "estudiantes": "Koubek",
+  "profesor": "EratVestibulumSed.doc"
+}, {
+  "nombre": 2,
+  "estudiantes": "St. Quintin",
+  "profesor": "Pretium.xls"
+}, {
+  "nombre": 1,
+  "estudiantes": "Chesman",
+  "profesor": "TinciduntAnte.ppt"
+}, {
+  "nombre": 6,
+  "estudiantes": "Enser",
+  "profesor": "EratErosViverra.mp3"
+}, {
+  "nombre": 10,
+  "estudiantes": "Emloch",
+  "profesor": "Consequat.mp3"
+}, {
+  "nombre": 9,
+  "estudiantes": "Morgen",
+  "profesor": "Quam.mp3"
+}, {
+  "nombre": 2,
+  "estudiantes": "Epinay",
+  "profesor": "QuamSollicitudinVitae.tiff"
+}, {
+  "nombre": 10,
+  "estudiantes": "Nutley",
+  "profesor": "OdioPorttitor.ppt"
+}, {
+  "nombre": 2,
+  "estudiantes": "Bradfield",
+  "profesor": "Turpis.tiff"
+}, {
+  "nombre": 1,
+  "estudiantes": "Gerdes",
+  "profesor": "LoremIntegerTincidunt.xls"
+}, {
+  "nombre": 4,
+  "estudiantes": "Langsbury",
+  "profesor": "CondimentumIdLuctus.mp3"
+}, {
+  "nombre": 9,
+  "estudiantes": "Rizzardini",
+  "profesor": "Arcu.gif"
+}, {
+  "nombre": 3,
+  "estudiantes": "Stannah",
+  "profesor": "NecCondimentum.avi"
+}, {
+  "nombre": 5,
+  "estudiantes": "Gittens",
+  "profesor": "Quam.jpeg"
+}, {
+  "nombre": 6,
+  "estudiantes": "Hesey",
+  "profesor": "CursusVestibulum.ppt"
+}, {
+  "nombre": 9,
+  "estudiantes": "Lammert",
+  "profesor": "UtMassa.xls"
+}, {
+  "nombre": 2,
+  "estudiantes": "Uman",
+  "profesor": "Accumsan.xls"
+}, {
+  "nombre": 5,
+  "estudiantes": "Bramo",
+  "profesor": "InLectusPellentesque.mov"
+}, {
+  "nombre": 9,
+  "estudiantes": "Unitt",
+  "profesor": "DiamInMagna.doc"
+}, {
+  "nombre": 1,
+  "estudiantes": "Flood",
+  "profesor": "Sodales.avi"
+}, {
+  "nombre": 5,
+  "estudiantes": "Beardsley",
+  "profesor": "LoremQuisque.jpeg"
+}]
+    ]
+);
+
+use("sample_training");
+db.createCollection("alumnos")
+
+use("sample_training");
+db.alumnos.insertOne({
+    _id:1,
+    nombre: "Manuel",
+    apellidos: "Garcia"
+}
+);
+
+use("sample_training");
+db.alumnos.insertMany(
+    [{
+  "_id": 4,
+  "nombre": "Shauna",
+  "apellido": "Vonni"
+}, {
+  "_id": 3,
+  "nombre": "Malchy",
+  "apellido": "Lorine"
+}, {
+  "_id": 1,
+  "nombre": "Jameson",
+  "apellido": "Gabriello"
+}], 
+{ordered : false})
+
+;

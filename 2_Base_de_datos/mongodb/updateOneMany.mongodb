@@ -1,0 +1,125 @@
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.updateOne(
+    //filtro
+    {
+        estudiante:15
+    },
+    // Actualizacion
+    {
+        $set:
+        {
+            profesor:"Jose"
+        }
+    }
+);
+
+use("sample_training");
+db.Curso.find();
+
+//updateMany
+
+use("sample_training");
+db.Curso.updateMany(
+    //$gt, $lt, $gte, $lte
+    //filtro
+    {
+        estudiantes: {
+            $gt:4
+        }
+    },
+    //actualizacion
+    {
+        $set: {
+            profesor : "Pedro"
+        }
+    }
+    
+);
+
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.insertOne(
+    {
+        nombre: "matematica",
+        estudiantes: 12,
+        profesor: "Pedro"
+    }
+);
+
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.insertMany(
+    [{
+  "nombre": "Obediah",
+  "estudiante": 46,
+  "profesor": "Carol-jean"
+}, {
+  "nombre": "Madelene",
+  "estudiante": 54,
+  "profesor": "Francene"
+}, {
+  "nombre": "Rollo",
+  "estudiante": 22,
+  "profesor": "Ailsun"
+}]
+
+);
+
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.updateMany(
+    {
+
+    },
+    {
+        $set:{
+            nombre:"Ciencias"
+        }
+    }
+);
+
+use("sample_training");
+db.Curso.updateOne(
+    {
+        estudiantes:{
+            $gt:100
+        }
+    },
+    {
+        $set:{
+            profesor:"Rajeth"
+        }
+    },
+        {
+            upsert: true
+        }
+    
+)
+
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.deleteMany(
+    {
+        profesor:"Juan"
+    }
+);
+use("sample_training");
+db.Curso.find();
+
+use("sample_training");
+db.Curso.find(
+    {
+        profesor: "Juan"
+    }
+);
