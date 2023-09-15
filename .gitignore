@@ -14,5 +14,8 @@
 *.mkv
 *.mov
 *.wmv
+*.drawio
 variado
 grabaciones
+out
+.idea

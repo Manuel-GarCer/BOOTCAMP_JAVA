@@ -1,0 +1,186 @@
+use ("sample_training")
+
+db.zips.find();
+
+use("sample_training")
+db.zips.find({
+    pop:{
+        //gt
+        $gt:30000
+    }
+});
+
+//todos los documentos que tengan mayor 20k y menor a 45k y su state sea "AL"
+use("sample_training")
+db.zips.find({
+    $and:[
+        {
+            pop:{
+                $gt:20000
+            }
+        },
+        {
+            pop:{
+                $lt:45000
+            }
+        },
+        {
+            state: "AL"
+        }
+    
+
+    ]
+}).count(); //cuantos documentos trae
+
+
+//incrementando
+use("sample_training");
+db.zips.updateOne(
+    {    //filtro
+        _id: new ObjectId("5c8eccc1caa187d17ca6ed21")
+    },
+    {
+        $inc:{
+            pop:2000
+    }
+}
+)
+
+use("sample_training");
+db.zips.find({
+    _id: new ObjectId("5c8eccc1caa187d17ca6ed21")
+
+})
+
+// rename
+use("sample_training");
+db.zips.updateMany(
+
+    {},//filtro vacio
+    {
+        $rename:{
+            pop: "population"
+        }
+    }
+)
+
+use ("sample_training")
+db.zips.find();
+
+
+
+use("sample_mflix")
+db.movies.find()
+
+
+use("sample_mflix")
+db.movies.find(
+    {
+        genres:{
+            $in:["Drama","History"]
+        }
+    },
+    {
+        genres: true,
+        directors: true
+    }
+);
+
+use("sample_mflix")
+db.movies.find(
+    {
+        genres:{
+            $in:["Drama","History"]
+        }
+    },
+    {
+        genres: true,
+        directors: true
+    }
+);
+
+use("sample_mflix")
+db.movies.find(
+    {
+        genres:{
+            $in:["Drama","History"]
+        },
+        directors: "Charles Bryant"
+    },
+    {
+        genres: true,
+        directors: true
+    }
+);
+
+use("sample_mflix")
+db.movies.find(
+    {
+        languages:{
+            $size:4
+        }
+    },
+    {
+        languages: true,
+        title: true
+    }
+
+);
+
+use("sample_training")
+db.zips.find(
+    {
+        "loc.x":{
+            $gt:100
+        }
+    }
+);
+
+
+//obtener los documentos que tienen una poblacion mayor que 3000 y su ubicacion en x es menor que 70
+
+use("sample_training")
+db.zips.find({
+
+    $and:[
+        {
+            population:{$gt:3000}
+        },
+        {
+            "loc.x":{$lt:70}
+        }
+    ]
+}).count();
+
+use("sample_training");
+db.companies.find();
+
+// de la coleccion companies obtener los documentos donde tenga un fundador llamado Mark
+
+use("sample_training");
+db.companies.find(
+    {
+        "relationships.0.person.first_name": "Mark"
+
+    },
+    {
+        relationships: true
+    }
+).count();
+
+//regex
+
+use("sample_analytics")
+db.customers.find(
+    {
+        address:{
+            $regex: /hollow/i
+        }
+    },
+    {
+        address: true
+    }
+);
+
+
+

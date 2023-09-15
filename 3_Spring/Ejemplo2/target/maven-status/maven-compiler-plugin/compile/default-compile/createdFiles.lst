@@ -1,0 +1,5 @@
+org\example\Main.class
+org\example\repository\ProductoRepository.class
+org\example\service\ProductoService.class
+org\example\controller\ProductoController.class
+org\example\entity\Producto.class

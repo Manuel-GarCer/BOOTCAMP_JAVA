@@ -1,0 +1,16 @@
+[
+  {
+  "nombre": "Manuel",
+  "apellido": "García",
+  "ciudad": "Lima",
+  "edad": 39,
+  "amigos": ["Arturo", "Juan", "Pedro"]
+},
+  {
+   "nombre": "Arturo",
+    "apellido": "Bardales",
+    "ciudad": "Lima",
+    "edad": 39,
+    "amigos": ["Manuel", "Juan", "Pedro"]
+  }
+]

@@ -1,0 +1,180 @@
+use("sample_analytics")
+db.createCollection("usuarios",
+    {
+        validator:{
+            $jsonSchema:{
+                bsonType: "object",
+                required: ["nombre", "apellido", "password"],
+                properties: {
+                    nombre: {
+                        bsonType: "string"
+                        
+                    },
+                    apellido:{
+                        bsonType: "string"
+                        
+                    },
+                    edad:{
+                        bsonType: "number",
+                        
+                    }
+                    }
+                    }
+        }
+
+    }
+
+)
+
+use("sample_analytics")
+db.usuarios.insertOne(
+    {
+        nombre: 'Manuel',
+        apellido: 'Garcia',
+        password:'uygdjdi'
+    }
+)
+
+// books // titulo, author, año, precio
+
+use("sample_analytics")
+
+db.createCollection("books",
+    {
+        validator:{
+            $jsonSchema:{
+                bsonType: "object",
+                required: ["titulo", "autor", "año", "precio"],
+                properties: {
+                    titulo: {
+                        bsonType: "string"
+
+                    },
+                    autor:{
+                        bsonType: "string"
+
+                    },
+                    año:{
+                        bsonType: "string"
+
+                    },
+                    precio:{
+                        bsonType: "number",
+
+                    }
+    }
+}
+}
+    }
+
+)
+
+use("sample_analytics")
+db.createCollection("ropa",
+    {
+        validator:{
+            $jsonSchema:{
+                bsonType: "object",
+                required: ["nombre", "precio", "talla"],
+                properties: {
+                    nombre: {
+                        bsonType: "string"
+                        
+                    },
+                    precio:{
+                        bsonType: "number"
+                        
+                    },
+                    talla:{
+                        bsonType: "array",
+                        
+                    }
+                    }
+                    }
+        }
+
+    }
+
+)
+use("sample_analytics")
+db.ropa.insertOne(
+    {
+        nombre: "T-shirt",
+        precio: 50,
+        talla:['L','M', 'S']
+    }
+)
+
+use("sample_analytics")
+db.createCollection("movies",
+    {
+        validator:{
+            $jsonSchema:{
+                bsonType: "object",
+                required: ["title", "cast", "director"],
+                properties: {
+                    title: {
+                        bsonType: "string"
+                        
+                    },
+                    cast:{
+                        bsonType: "array"
+                        
+                    },
+                    director:{
+                        bsonType: "object",
+                        required: ["firstName", "lastName"],
+                        properties:{
+                            firstName:{
+                                bsonType: "string"
+                                
+                            },
+                            lastName:{
+                                bsonType: "string"
+                            }
+                        }
+                        
+                    }
+                    }
+                    }
+        }
+
+    }
+
+)
+
+
+use("sample_analytics")
+db.movies.insertOne(
+    {
+        title: "The Lord of the Ring",
+        cast: ["Ian McKellen", "Elijah Wood", "Sean Bean"],
+        director: {
+            firstName: "Peter",
+            lastName: "Jackson"
+    }
+    }
+)
+
+use("sample_analytics")
+db.movies.find()
+
+use("sample_airbnb")
+db.listingsAndReviews.aggregate(
+    {
+        $match: {
+            amenities: "wifi"
+        }
+    },
+    {
+        $project:{
+            address: true
+        }
+    },
+    {
+        $group:{
+            _id: "$andress.country"
+        }
+    }
+
+)
