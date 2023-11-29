@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: tomato;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "Header"
+    "Aside"
+    "Main"
+    "Main"
+    "Main"
+    "Footer";
+}
+
+
+header {
+  grid-area: Header;
+  padding: 1.25rem;
+  background-color: cyan;
+  margin:10px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  border-radius:10px;
+  position:sticky;
+  top:0;
+  z-index:99999999999999;
+}
+
+
+header > img {
+  width:80px;
+  height:60px;
+  border-radius:25%;
+  margin:10px;
+}
+
+.menu {
+  display:flex;
+  flex-direction:column;
+  place:center;
+  width:30px;
+  height:30px;
+  justify-content:center;
+  align-items:center;
+  margin-top:10px;
+}
+
+header > nav {
+  display:none;
+}
+header nav ul {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  list-style:none;
+}
+
+header nav ul li {
+  margin:0 10px;
+  background-color:orange;
+  padding:0px 20px;
+  border-radius:5px;
+  min-width:50px;
+}
+header nav ul li a {
+  text-decoration:none;
+  color:black;
+  font-size:1rem;
+}
+
+aside {
+  grid-area: Aside;
+  background-color: yellow;
+  padding: 10px;
+  margin:10px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+}
+
+aside img {
+  width:100%;
+  border-radius:10px;
+}
+
+
+main {
+  grid-area: Main;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  background-color: green;
+}
+
+main > section {
+  background-color: magenta;
+  padding: 10px;
+  margin:10px;
+  border-radius:10px;
+  display:flex;
+  display:flex;
+  flex-direction:column;
+}
+
+main section:first-child {
+  justify-content:center;
+  align-items:center;
+}
+main section:nth-child(3) {
+  display:flex;
+  flex-direction:column;
+  
+  justify-content:center;
+  align-items:center;
+}
+
+main section:last-child {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.contenido {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.main__img {
+  /* min-width: 100px; */
+  width: 200px;
+  border-radius: 10px;
+}
+
+#texto {
+  width:30%;
+  padding:10px;
+  margin:10px;
+}
+
+
+
+footer {
+  grid-area: Footer;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  background-color: #5D3FD3;
+  gap: 10px;
+}
+
+footer h2 {
+  text-align:center;
+}
+
+footer section ul {
+  justify-content:center;
+  align-items:center;
+  list-style:none;
+}
+
+
+footer section {
+  background-color: #5D3F;
+  padding: 20px;
+  margin:10px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+}
+
+button {
+  background-color: tomato;
+  padding: 10px;
+  margin:10px;
+  border-radius:50%;
+  border:none;
+  font-size:1.5rem;
+  cursor:pointer;
+  position:fixed;
+  bottom:0;
+  right:10px;
+  height:60px;
+  width:60px;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "Header Header"
+      "Aside Main "
+      "Footer Footer";
+  }
+
+
+  header > img {
+    width:120px;
+    height:60px;
+    border-radius:15%;
+  }
+  header > nav {
+    display:flex;
+  }
+  .menu {
+    display:none
+  }
+
+  header {
+    justify-content:space-between;
+  }
+ 
+  main {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    background-color: blue;
+  }
+  
+  main section:first-child {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-width:25%;
+  }
+
+  footer {
+    justify-content:flex-start;
+  }
+
+  footer section {
+    width:10vw;
+  }
+  footer section ul {
+    flex-direction:column;
+  }
+  footer section ul li {
+    margin:10px 0;
+  }
+  footer section ul li a {
+    font-size:1.5rem;
+  }
+  button {
+    bottom:10px;
+    right:10px;
+  }
+}

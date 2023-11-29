@@ -1,0 +1,27 @@
+main {
+  background-color: tomato;
+  color: white;
+}
+p{
+  font-size: 20px;
+  margin: 50px;
+}
+
+section {
+  background-color: lightblue;
+  color: black;
+  position:sticky;
+  top: 0;
+  margin-bottom: 50px;
+}
+
+button {
+  color: white;
+  background-color: teal;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

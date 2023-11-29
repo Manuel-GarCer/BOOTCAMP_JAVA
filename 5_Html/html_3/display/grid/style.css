@@ -1,0 +1,42 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 21px 10px;
+  grid-template-areas:
+    "Grilla-1 Grilla-2"
+    "Grilla-3 Grilla-4"
+    "Grilla-5 Grilla-6";
+  background-color: tomato;
+  padding: 20px;
+}
+.Grilla-1 {
+  grid-area: Grilla-1;
+  background-color: #2196f3;
+  display:flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: yellow;
+}
+.Grilla-2 {
+  grid-area: Grilla-2;
+  background-color: #2196f3;
+}
+.Grilla-3 {
+  grid-area: Grilla-3;
+  background-color: #2196f3;
+}
+.Grilla-4 { 
+  grid-area: Grilla-4;
+  background-color: #2196f3;
+}
+.Grilla-5 {
+  grid-area: Grilla-5;
+  background-color: #2196f3;
+}
+.Grilla-6 {
+  grid-area: Grilla-6;
+  background-color: #2196f3;
+}

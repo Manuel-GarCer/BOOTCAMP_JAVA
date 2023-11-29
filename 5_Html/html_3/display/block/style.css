@@ -1,0 +1,9 @@
+
+.display__box { 
+  display: block;
+  background-color: tomato;
+}
+.display__inline-box { 
+  display: inline-block;
+  background-color: teal;
+}

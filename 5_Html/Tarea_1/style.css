@@ -1,0 +1,124 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    background-color: #ADD8E6;
+    grid-template-areas:
+        "Header Header"
+        "aside section"
+        "aside section_1"
+        "aside section_2"
+        "aside section_3"
+        "footer footer";
+}
+.header {
+    grid-area: Header;
+    display: flex;
+    justify-content: space-between;
+    background-color: turquoise;
+    /* Turquesa */
+    padding: 10px;
+    position: sticky;
+    height: 260px;
+    top: 0;
+    z-index: 10;
+    
+}
+.rounded-img {
+    border-radius: 50%;
+    padding: 50px;
+    height: 150px;
+    width: 150px;
+    
+}
+
+
+.header ul li a {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    background-color: orange;
+    padding: 0px 20px;
+    border-radius: 5px;
+    min-width: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+.aside {
+    grid-area: aside;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.straight-img {
+    border-radius: 0%;
+    padding: 50px;
+    height: 150px;
+    width: 150px;
+}
+
+.section {
+    grid-area: section;
+    background-color: #FFC0CB;
+        /* Rosado */
+    text-align: center;
+    padding: 20px;
+}
+
+.section_1 {
+    grid-area: section_1;
+    background-color: #FFC0CB;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.section_2 {
+    grid-area: section_2;
+    background-color: #FFC0CB;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.section_3 {
+    grid-area: section_3;
+    background-color: #FFC0CB;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: purple;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-section {
+    background-color: green;
+    padding: 15px;
+}
+
+.floating-button {
+    color: black;
+    background-color: #ADD8E6;
+    position: fixed;
+    padding: 15px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+}

@@ -1,0 +1,44 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding: 0 20px;
+  background-color: tomato;
+}
+
+footer section h3 {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+footer section ul li a {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+main section:nth-child(odd) { 
+  background-color: tomato;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+.estilos__section__footer {
+  background-color: teal;
+  margin: 20px;
+  padding:10px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+#estilo_unico {
+  background-color: teal;
+  margin: 20px;
+  padding:10px;
+  border-radius: 10px;
+  justify-content: center;
+}
