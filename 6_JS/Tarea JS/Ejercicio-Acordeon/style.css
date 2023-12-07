@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&family=Open+Sans&family=Poppins:wght@200;400;600&family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-color: var(--Light-pink);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h2, h3 {
+    color: var(--Dark-purple);
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+p {
+    color: var(--Grayish-purple);
+    font-size: 16px;
+}
+
+.container {
+    background-color: var(--White);
+    width: 90%;
+    max-width: 36rem;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 1px 10px 30px hsla(0, 0%, 30%, 0.1);
+}
+
+.header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.header img {
+    width: 25px;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+    height: 3rem;
+    padding-right: 3rem;;
+    cursor: pointer;
+}
+
+.question:hover {
+    background-color: var(--Light-pink);
+}
+
+.question:hover h2 {
+    color: rgb(165, 0, 165);
+}
+
+.question:active {
+    background-color: hsl(0, 0%, 60%, 0.2);
+}
+
+.question:active h2 {
+    color: rgb(189, 0, 189);
+}
+
+.question img {
+    position: absolute;
+    right: 0;
+    width: 2rem;
+}
+
+.minus-icon {
+    max-height: 0;
+}
+
+.answer {
+    margin-bottom: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5rem;
+    transition: max-height .5s ease;
+    border-bottom: 1px solid var(--Light-pink);
+}
+
+@media (min-width: 900px) {
+
+    body {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+    
+    .question {
+        padding-right: 0;
+    }
+
+    .container {
+        padding: 2rem;
+    }
+}
